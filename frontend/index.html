@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tower of Hanoi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Tower of Hanoi</h1>
+            <p>Powered by Prolog</p>
+        </header>
+
+        <section class="game-info">
+
+            <div class="info-box">
+                <span>Disks</span>
+                <strong id="diskCount">3</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Moves</span>
+                <strong id="moveCount">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Minimum</span>
+                <strong id="minimumMoves">15</strong>
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <label for="diskSelect">
+                Number of Disks:
+            </label>
+
+            <select id="diskSelect">
+              <option value="3">3 Disks</option>
+<option value="4">4 Disks</option>
+<option value="5">5 Disks</option>
+<option value="6">6 Disks</option>
+<option value="7">7 Disks</option>
+            </select>
+
+            <button onclick="startGame()">
+                New Game
+            </button>
+
+        </section>
+
+        <section class="game-board">
+
+            <div class="tower" id="tower0" onclick="selectTower(0)">
+                <div class="pole"></div>
+                <div class="base"></div>
+            </div>
+
+            <div class="tower" id="tower1" onclick="selectTower(1)">
+                <div class="pole"></div>
+                <div class="base"></div>
+            </div>
+
+            <div class="tower" id="tower2" onclick="selectTower(2)">
+                <div class="pole"></div>
+                <div class="base"></div>
+            </div>
+
+        </section>
+
+        <div id="message" class="message">
+            Click a tower to select a disk.
+        </div>
+
+        <button class="reset-button" onclick="startGame()">
+            Reset Game
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
